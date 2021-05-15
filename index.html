@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>wc-input</title>
+		<meta charset="utf-8">
+		<style>
+			body { font-family: sans-serif }
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>wc-input</h1>
+			This extends the standard input to do some interesting things
+			
+			<h2>Basic input</h2>
+			<table>
+				<tr><td>Input</td><td><wc-input></wc-input></tr>
+				<tr><td>Input value="2345"</td><td><wc-input value="2345"></wc-input></td></tr>
+				<tr><td>Input placeholder="hello"</td><td><wc-input placeholder="hello"></wc-input></td></tr>
+				<tr><td>Input readonly</td><td><wc-input value="11111" readonly></wc-input></td></tr>
+				<tr><td>Input with error</td><td><wc-input pattern="int" value="55aa"></wc-input></td></tr>
+			</table>
+
+			<h2>spans</h2>
+			<p>Span sets the control to a preset width</p>
+			<table>
+				<tr><td>Input span="narrow"</td><td><wc-input span="narrow"></wc-input></td></tr>
+				<tr><td>Input span="normal"</td><td><wc-input span="normal"></wc-input></td></tr>
+				<tr><td>Intput span="wide"</td><td><wc-input span="wide"></wc-input></td></tr>
+				<tr><td>Input span="extrawide"</td><td><wc-input span="extrawide"></wc-input></td></tr>
+			</table>
+
+			<h2>pattern</h2>
+			<p>Like <b>input</b>, pattern sets the allowed regex input but adds a few presets</p>
+			<table>
+				<tr><td>Input pattern="\d+"</td><td><wc-input pattern="\d+" value="2345"></wc-input></td></tr>
+
+				<tr><td>Input pattern="int"</td><td><wc-input pattern="int" value="55"></wc-input></td></tr>
+				<tr><td>Input pattern="+int"</td><td><wc-input pattern="+int" value="55"></wc-input></td></tr>
+				<tr><td>Input pattern="-int"</td><td><wc-input pattern="-int" value="-55"></wc-input></td></tr>
+
+				<tr><td>Input pattern="float"</td><td><wc-input pattern="float" value="5.5"></wc-input></td></tr>
+				<tr><td>Input pattern="+float"</td><td><wc-input pattern="+float" value="5.5"></wc-input></td></tr>
+				<tr><td>Input pattern="-float"</td><td><wc-input pattern="-float" value="-5.5"></wc-input></td></tr>
+			</table>
+
+			<h2>minmax</h2>
+			<p>Min and max are supported as expected</p>
+			<table>
+				<tr><td>Input min="10"</td><td><wc-input min="10" value="11"></wc-input></td></tr>
+				<tr><td>Input max="10"</td><td><wc-input max="10" value="9"></wc-input></td></tr>
+			</table>
+
+			<h2>fix</h2>
+			<p>Fix rounds values to a set decimal place. It will not override what the user entered</p>
+			<table>
+				<tr><td>Input fix="4"</td><td><wc-input fix="4" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="3"</td><td><wc-input fix="3" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="2"</td><td><wc-input fix="2" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="1"</td><td><wc-input fix="1" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="0"</td><td><wc-input fix="0" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="-1"</td><td><wc-input fix="-1" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="-2"</td><td><wc-input fix="-2" value="123.456"></wc-input></td></tr>
+				<tr><td>Input fix="-3"</td><td><wc-input fix="-3" value="123.456"></wc-input></td></tr>
+
+			</table><br>
+		</div>
+
+		<script type="module" src="./src/wc-input.js" inline></script>
+	</body>
+</html>
