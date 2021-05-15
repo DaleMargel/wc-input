@@ -1,4 +1,4 @@
-# **WC-INPUT**
+# **wc-input**
 > an &lt;input&gt; tag on steroids
 
 This extends the input tag
